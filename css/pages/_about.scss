@@ -1,0 +1,58 @@
+.about{
+    .overlay{
+        @include flex-column;
+    }
+    .row .text+.text{
+        background: rgb(246, 65, 59);
+        color: #fff;
+        padding: 20px;
+        line-height: 25px;
+    }
+    .text p{
+        text-align: left;
+    }
+    strong{
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    .card{
+        position: relative;
+    }
+    .card::after{
+        content: '';
+        @include centerer;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(246, 65, 59);
+        opacity: 0;
+        transition: all .3s ease-in-out;
+    }
+    .photo:hover .card::after{
+        opacity: .4;
+    }
+    .overlay{
+        @include centerer-bottom;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        height: 30%;
+        width: 80%;
+        text-transform: uppercase;
+        color: white;
+        background: rgb(246, 65, 59);
+        transform: translateY(100%);
+        transition: all .3s ease-in-out;
+    }
+    .photo{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .photo:hover .overlay{
+        transform: translateY(0%);
+    }
+}

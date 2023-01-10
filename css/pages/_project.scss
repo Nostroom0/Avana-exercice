@@ -1,0 +1,31 @@
+.project{
+    .wrapper{
+        @include flex-column;
+        gap: 20px;
+    }
+    .row{
+        width: 100%;
+    }
+    .column{
+        @include flex-column;
+        gap: 40px;
+    }
+    .visit{
+        font-size: 10px;
+        margin-top: 20px;
+        color: rgb(246, 65, 59);
+        i{
+            padding-left: 10px;
+            font-size: 18px;
+            color: #000;
+        }
+        
+    }
+    .visit:hover strong{
+        color: #000;
+    }
+    .visit:hover i{
+        color: rgb(246, 65, 59);
+    }
+    
+}

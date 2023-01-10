@@ -1,0 +1,56 @@
+.work{
+    .overlay{
+        @include notcenter;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        text-transform: uppercase;
+        color: white;
+        background: rgba(0,0,0,.2);
+    }
+    .overlay::after{
+        content: '';
+        @include centerer;
+        width: 10%;
+        height: 10%;
+        outline: 1px solid #fff;
+        transition: all .3s ease-in-out;
+        opacity: 0;
+    }
+    .photo:hover .overlay::after{
+        width: 90%;
+        height: 90%;
+        outline: 1px solid #fff;
+        opacity: 1;
+    }
+    .overlay p{
+        opacity: 0;
+    }
+    .photo:hover p{
+        opacity: 1;
+        transition: all .4s ease-in-out .2s;
+    }
+    .overlay>*{
+        transition: all .4s ease-in-out;
+        
+    }
+    .photo:hover .overlay>*{
+        transform: translateY(-35px);
+    }
+    
+    .story{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        margin-top: 25px;
+    }
+    .column{
+        width: 50%;
+        @include flex-column;
+        gap: 20px;
+    }
+}
