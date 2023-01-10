@@ -2,6 +2,9 @@
     .overlay{
         @include flex-column;
     }
+    .row{
+        margin-bottom: 50px;
+    }
     .row .text+.text{
         background: rgb(246, 65, 59);
         color: #fff;
